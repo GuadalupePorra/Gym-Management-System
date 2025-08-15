@@ -1,0 +1,32 @@
+# Entorno virtual
+venv/
+.env
+.env.*
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos estáticos generados
+staticfiles/
+media/
+recibos_caja/
+
+
+# Logs
+*.log
+
+# Django settings que podrían contener datos sensibles
+secret.py
+settings_local.py

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: Helvetica, Arial, sans-serif; 
+            font-size: 12pt; 
+            margin: 40px;
+        }
+        h1,h2 { 
+            text-align: center; 
+            margin-bottom: 30px;
+        }
+        
+        .dato {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zeus GYM</h1>
+    <h2>RECIBO DE PAGO</h2>
+
+    <hr style="border: 1px solid black; margin: 10px 0;">
+    <p class="dato"><strong>Fecha:</strong> {{ fecha|date:"d/m/Y " }}</p>
+    <p class="dato"><strong>Socio:</strong> {{ socio.nombre }} {{ socio.apellido }}</p>
+    <p class="dato"><strong>DNI:</strong> {{ socio.dni }}</p>
+    <p class="dato"><strong>Tipo de membresía:</strong> {{ socio.id_membresia.tipo }}</p>
+    <p class="dato"><strong>Duración:</strong> {{ socio.id_membresia.duracion }} días</p>
+    <p class="dato"><strong>Monto:</strong> ${{ monto|floatformat:2 }}</p>
+    <p class="dato"><strong>Forma de pago:</strong> {{ medio_pago }}</p>
+
+    <hr style="border: 1px solid black; margin: 10px 0;">
+    <p>Gracias por su pago.</p>
+</body>
+</html>
