@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m(o$-ldz!0wp$zbe&s3d(goh&kr(lwknvir!m#!fxokvhm6@o)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'zeus-gym-production.up.railway.app']
 
@@ -93,7 +93,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_api.wsgi.application'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'gym-frontend', 'build'),
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -129,15 +129,11 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'caja/static'), 
-    os.path.join(BASE_DIR / "static"),
+    os.path.join(BASE_DIR, 'caja', 'static'),
     os.path.join(BASE_DIR, 'gym-frontend', 'build', 'static'),
 ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Indica donde Django servirá los archivos estáticos de la aplicación React
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
