@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-m(o$-ldz!0wp$zbe&s3d(goh&kr(lwknvir!m#!fxokvhm6@o)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'zeus-gym-production.up.railway.app']
 
 
 # Application definition
