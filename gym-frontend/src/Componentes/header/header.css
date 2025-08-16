@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+.titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+.titulo h1{
+    font-size: 6rem;
+}
+.zeus{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;    
+}
+
+.nv_zeus{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none; 
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.nv_zeus:hover{
+    color: rgb(181, 255, 45);
+}
+
+.navbar {
+    position: fixed;        
+    top: 0;              
+    left: 0;              
+    right: 0;               
+    z-index: 1000;          
+    width: 100%;           
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    background-color: rgba(0, 0, 0, 0.704);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.025); 
+    padding: 1rem 2rem;
+  }
+  .navbar button a{
+    text-decoration: none;
+    color: black;
+  }
+  .navbar button {
+    background-color: rgb(181, 255, 45);
+    color: black;
+  }
+  .navbar button a:hover{
+    color:  rgb(181, 255, 45);
+
+  }
+  .navbar button:hover{
+    border-color: rgb(181, 255, 45);
+    
+  }
+  .navbar a,
+  .navbar .navbar-brand,
+  .navbar .navbar-nav .nav-link {
+    left: 2rem;
+    color: white;  /* Cambia el color del texto a blanco para contrastar con el fondo oscuro */
+  }
+  
+  /* Efecto hover para los enlaces del navbar */
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+    color: rgb(181, 255, 45); /* Cambia el color del texto a verde cuando el mouse pasa por encima */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    }
+
+  /* Estilo para el navbar-toggler */
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);  /* Borde más visible */
+        background-color: rgba(0, 0, 0, 0.3);   /* Fondo transparente */
+    }
+  
+  .navbar-toggler-icon {
+    background-color: rgb(1, 1, 1);  /* Color del icono en blanco */
+  }
+  
+  .navbar-nav-scroll {
+    max-height: 200px;  /* Ajusta el tamaño máximo del scroll para el menú */
+    overflow-y: auto;   /* Permite el scroll si el menú es muy largo */
+  }
+
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(181, 255, 45, 0.2); /* Fondo verde claro al hacer hover */
+    color: rgb(181, 255, 45); /* Cambia el color del texto a verde */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }

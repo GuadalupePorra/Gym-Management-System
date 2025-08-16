@@ -1,0 +1,8 @@
+.footer-white {
+  background-color: #fff;
+  height: 50px; /* altura de la franja blanca */
+}
+
+.footer-dark {
+  background-color: #212529; /* similar a bg-dark de bootstrap */
+}

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --color-principal: rgb(181, 255, 45);
+}
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+.main{
+    padding: 4rem, 0;
+    background-color: black;
+}
+
+ 
+.main .insc_clases{
+    padding: 1rem 0;
+    background-color: rgb(181, 255, 45);
+    justify-content: center;
+    align-items: center;
+}
+.main .insc_clases .btn{
+    color: rgb(181, 255, 45);          
+    border-radius: 10%;               
+    background-color: black;          
+    /*border: none;   */                  
+    display: block;                   
+    margin: 0 auto;                   
+    padding: 1rem;    
+}
+
+.main .insc_clases .btn:hover{
+    color: rgb(0, 0, 0);          /* Color del texto */
+    border-radius: 10% ;  
+    border: 0.2rem solid rgb(0, 0, 0);
+    background-color: rgb(181, 255, 45);          /* Color de fondo */
+    
+}
+.main .clases{
+    padding: 2rem 0;
+    color: rgb(181, 255, 45);
+    text-align: center;
+}
+.main .slider-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+}
+.main .clases h2{
+  font-weight: 800;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.main .card-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: rgba(0, 0, 0, 0.6); 
+  /*border: 1px solid white;*/
+  color: white;
+  border-radius: 10px;
+  width: 285px;
+  height: 100%;
+  margin-right: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(182, 178, 178, 0.314);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-custom img {
+  width: 100%; 
+  height: 180px; /* o el alto que prefieras */
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+.main .card-custom h5 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+
+}
+
+.main .card-custom p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  padding:  0 1.5rem;
+  font-size: 15px;
+}
+
+.main .card-custom a.btn {
+  margin-top: auto;
+  background-color: var(--color-principal);
+  border: none;
+  color: black;
+  margin-top: auto;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.main .card-custom a.btn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid var(--color-principal);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.main .membresias-container {
+  display: flex;
+  align-items: flex-start;
+  background: black;
+  color: white;
+}
+
+.membresias-container .membresias-info {
+  flex: 1;
+  position: sticky;
+  top: 100px; 
+  height:600px;
+  padding-right: 2rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--color-principal);
+}
+
+ .membresias-info h2 {
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 50px;
+  font-weight:800;
+  padding: 0 5rem;
+}
+
+.membresias-info p {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.membresias-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.membresia-card {
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1000px;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  box-shadow: 0 4px 8px rgba(182, 178, 178, 0.314);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.membresia-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.membresia-card.show {
+    height: 350px;
+    width: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    align-content: center;
+    text-align: center;
+}
+
+/* 👇 Ambas caras */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* 👇 Frente: fondo con imagen */
+.card-front {
+  background-image: url('/public/imagenes/gym_mem.jpg'); /* o personalizá por tipo */
+  background-size: cover;
+  background-position: center;
+}
+
+.card-front h5 {
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 3px 2px 6px rgb(0 0 0 / 91%);
+  position: relative;
+  z-index: 1;
+}
+
+/* 👇 Dorso: descripción */
+.card-back {
+  background-color: #1f1f1f;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 1.1rem;
+}
+.card-back h6{
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+/* Tablet y menor (<= 992px) */
+@media (max-width: 992px) {
+  .main .membresias-container {
+    flex-direction: column; /* 👈 cambia de fila a columna */
+    align-items: center;
+  }
+
+  .membresias-container .membresias-info {
+    position: static;     /* 👈 desactiva sticky en pantallas pequeñas */
+    height: auto;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .membresias-info h2 {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .membresias-info p {
+    font-size: 1.1rem;
+  }
+
+  .membresias-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .membresia-card.show {
+    width: 45%;
+    height: 300px;
+  }
+}
+
+/* Celulares (<= 600px) */
+@media (max-width: 600px) {
+  .main .membresias-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .membresias-container .membresias-info {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+
+  .membresias-info h2 {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .membresias-info p {
+    font-size: 1rem;
+  }
+
+  .membresias-list {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  
+
+  .card-front h5 {
+    font-size: 2rem;
+  }
+
+  .card-back {
+    font-size: 0.9rem;
+  }
+}
