@@ -71,12 +71,14 @@ CORS_ALLOW_METHODS = [
 
 ROOT_URLCONF = 'django_api.urls'
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'react_build'), 
+            BASE_DIR / "templates",                # tus templates normales
+            BASE_DIR / "gym-frontend" / "build",  # build de React
         ],
         'APP_DIRS': True,
         'OPTIONS': {

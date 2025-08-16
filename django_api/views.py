@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-def index(request):
-    return render(request, 'react_build/index.html')
+class FrontendAppView(TemplateView):
+    template_name = "index.html"
