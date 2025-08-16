@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
+import dj_database_url
+
 AUTH_USER_MODEL = 'usuario_sistema.UsuarioSistema' 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -103,35 +105,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'recibos_caja') 
 
 
-
-"""DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gimnasio_bd',
-        'USER': 'root',
-        'PASSWORD': '159753',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}"""
-""""
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://postgres:NnJVQltzQLzKSVIAlEYDGgVdmzfKYEcG@postgres.railway.internal:5432/railway',
         conn_max_age=600
     )
 
-}"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'NnJVQltzQLzKSVIAlEYDGgVdmzfKYEcG',
-        'HOST': 'crossover.proxy.rlwy.net',
-        'PORT': '33074',
-    }
 }
+
 
 
 
