@@ -75,7 +75,7 @@ const Main = () => {
                 <div className="membresias-container" id="membresias"> 
                     <div className="membresias-info"> 
                         <h2>NUESTRAS MEMBRESIAS</h2> 
-                        <p>Elegí la que mejor se adapte a vos!</p> 
+                        <p>¡Elegí la que mejor se adapte a vos!</p> 
                     </div> 
                     <div className="membresias-list"> 
                         <div className="membresia-card hidden"> 
