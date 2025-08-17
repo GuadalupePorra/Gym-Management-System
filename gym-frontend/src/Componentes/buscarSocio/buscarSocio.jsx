@@ -4,6 +4,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./buscarSocio.css";
 
+ const API = process.env.REACT_APP_API_URL;
+
 const BuscarSocio = () => {
   const [dni, setDni] = useState("");
   const [mensaje, setMensaje] = useState("");
@@ -18,7 +20,7 @@ const BuscarSocio = () => {
 
   const buscarSocio = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/socios/perfil/", { dni });
+      const response = await axios.post(`${API}/socios/perfil/`, { dni });
       if (response.status === 200) {
         navigate("/perfil", { state: { perfil: response.data } });
       } else {
