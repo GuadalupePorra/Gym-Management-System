@@ -9,12 +9,12 @@ const PerfilSocio = () => {
   const [mensaje, setMensaje] = useState("");
   const [perfilData, setPerfil] = useState(perfil || {});
   const [horarioSeleccionado, setHorarioSeleccionado] = useState({});
-
+  const API = process.env.REACT_APP_API_URL;
 
   // --- Actualiza el perfil desde backend ---
   const actualizarPerfil = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/socios/perfil/", {
+      const res = await axios.post(`${API}/socios/perfil/`, {
         dni: perfilData.dni,
         
       });
@@ -39,7 +39,7 @@ const PerfilSocio = () => {
   // --- Inscribirse a clase ---
   const inscribirseClase = async (claseId, horarioId) => {
     try {
-      const response = await axios.post("http://localhost:8000/clases/inscribirse/", {
+      const response = await axios.post(`${API}/clases/inscribirse/`, {
         dni: perfilData.dni,
         clase_id: claseId,
         horario_clase_id: horarioId,
@@ -60,7 +60,7 @@ const PerfilSocio = () => {
   // --- Darse de baja de clase ---
   const darseBajaClase = async (claseId, horarioId) => {
     try {
-      const response = await axios.post("http://localhost:8000/clases/darse_baja/", {
+      const response = await axios.post(`${API}/clases/darse_baja/`, {
         dni: perfilData.dni,
         horario_clase_id: horarioId,
         // clase_id: claseId, // opcional si backend lo requiere

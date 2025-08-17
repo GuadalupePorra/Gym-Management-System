@@ -4,6 +4,7 @@ import './header.css'
 import p1Img from '../../assets/portada1.png';
 import p2Img from '../../assets/portada2.png';
 import p3Img from '../../assets/portada3.png';
+const API = process.env.REACT_APP_ADMIN_URL;
 
 const Header = () => {
     return ( <> {/* Navbar */} 
@@ -73,7 +74,11 @@ const Header = () => {
                     </li> 
                 </ul> 
                 <button className="btn btn-outline"> 
-                    <a href="http://localhost:8000/admin/" target="_blank" rel="noopener noreferrer">Acceso administrativo</a> 
+                    <a href={API} 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    Acceso administrativo
+                    </a> 
                 </button> 
             </div> 
         </div> 
