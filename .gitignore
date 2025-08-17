@@ -19,7 +19,7 @@ __pycache__/
 .idea/
 
 # Archivos estáticos generados
-staticfiles/
+#staticfiles/
 media/
 recibos_caja/
 
