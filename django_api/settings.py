@@ -97,11 +97,23 @@ WSGI_APPLICATION = 'django_api.wsgi.application'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DATABASES = {
+"""DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://postgres:NnJVQltzQLzKSVIAlEYDGgVdmzfKYEcG@postgres.railway.internal:5432/railway',
         conn_max_age=600
     )
+
+}""" 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'NnJVQltzQLzKSVIAlEYDGgVdmzfKYEcG',
+        'HOST': 'crossover.proxy.rlwy.net',
+        'PORT': '33074',
+    }
 
 }
 
@@ -136,6 +148,8 @@ STATICFILES_DIRS = [
 ]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

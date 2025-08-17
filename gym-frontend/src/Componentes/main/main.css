@@ -209,7 +209,7 @@
 
 /* 👇 Frente: fondo con imagen */
 .card-front {
-  background-image: url('/public/imagenes/gym_mem.jpg'); /* o personalizá por tipo */
+  background-image: url('../../assets/gym_mem.jpg'); /* o personalizá por tipo */
   background-size: cover;
   background-position: center;
 }

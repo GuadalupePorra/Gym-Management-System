@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './header.css' 
+import p1Img from '../../assets/portada1.png';
+import p2Img from '../../assets/portada2.png';
+import p3Img from '../../assets/portada3.png';
 
 const Header = () => {
     return ( <> {/* Navbar */} 
@@ -82,13 +85,13 @@ const Header = () => {
     <div  id="inicio"className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000"> 
         <div className="carousel-inner"> 
             <div className="carousel-item active"> 
-                <img src="./imagenes/portada1.png"  className="d-block w-100 h-95" alt="First slide" style={{ height: '95vh', objectFit: 'fill' }}/> 
+                <img src={p1Img}  className="d-block w-100 h-95" alt="First slide" style={{ height: '95vh', objectFit: 'fill' }}/> 
             </div> 
             <div className="carousel-item"> 
-                <img src="./imagenes/portada2.png" className="d-block w-100 h-95" alt = "Second slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
+                <img src={p2Img} className="d-block w-100 h-95" alt = "Second slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
             </div> 
             <div className="carousel-item"> 
-                <img src="./imagenes/portada3.png" className="d-block w-100 h-95" alt = "Third slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
+                <img src={p3Img} className="d-block w-100 h-95" alt = "Third slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
             </div> 
         </div> 
     </div> 
