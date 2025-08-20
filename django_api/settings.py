@@ -161,14 +161,13 @@ CSRF_TRUSTED_ORIGINS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
-    "login_logo": "/img/logo.png",
+    "login_logo": "img/logo.png",
     "custom_css": "css/jazz.css",
     "site_title": "Zeus Gym",
     "site_header": "Zeus Gym",
     "site_brand": "Zeus Gym",
     "welcome_sign": "Bienvenido/a al sistema de gestión",
 
-    "show_ui_builder": True,
     
     "icons": {
         "ingreso_diario.Ingreso_diario": "fas fa-calendar-check",        # Ingresos registrados
