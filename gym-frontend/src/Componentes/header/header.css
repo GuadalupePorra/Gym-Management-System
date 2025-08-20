@@ -65,33 +65,33 @@
   .navbar .navbar-brand,
   .navbar .navbar-nav .nav-link {
     left: 2rem;
-    color: white;  /* Cambia el color del texto a blanco para contrastar con el fondo oscuro */
+    color: white; 
   }
   
   /* Efecto hover para los enlaces del navbar */
     .navbar .nav-link:hover,
     .navbar .navbar-brand:hover {
-    color: rgb(181, 255, 45); /* Cambia el color del texto a verde cuando el mouse pasa por encima */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    color: rgb(181, 255, 45); 
+    transition: color 0.3s ease; 
     }
 
   /* Estilo para el navbar-toggler */
     .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5);  /* Borde más visible */
-        background-color: rgba(0, 0, 0, 0.3);   /* Fondo transparente */
+        border-color: rgba(255, 255, 255, 0.5);  
+        background-color: rgba(0, 0, 0, 0.3);   
     }
   
   .navbar-toggler-icon {
-    background-color: rgb(1, 1, 1);  /* Color del icono en blanco */
+    background-color: rgb(1, 1, 1);  
   }
   
   .navbar-nav-scroll {
-    max-height: 200px;  /* Ajusta el tamaño máximo del scroll para el menú */
-    overflow-y: auto;   /* Permite el scroll si el menú es muy largo */
+    max-height: 200px; 
+    overflow-y: auto;   
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(181, 255, 45, 0.2); /* Fondo verde claro al hacer hover */
-    color: rgb(181, 255, 45); /* Cambia el color del texto a verde */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    background-color: rgba(181, 255, 45, 0.2); 
+    color: rgb(181, 255, 45); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
   }

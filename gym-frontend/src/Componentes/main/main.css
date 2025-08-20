@@ -237,12 +237,12 @@
 /* Tablet y menor (<= 992px) */
 @media (max-width: 992px) {
   .main .membresias-container {
-    flex-direction: column; /* 👈 cambia de fila a columna */
+    flex-direction: column; 
     align-items: center;
   }
 
   .membresias-container .membresias-info {
-    position: static;     /* 👈 desactiva sticky en pantallas pequeñas */
+    position: static;     
     height: auto;
     padding: 1rem;
     width: 100%;

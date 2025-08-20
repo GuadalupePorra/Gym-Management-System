@@ -90,13 +90,13 @@ const Header = () => {
     <div  id="inicio"className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000"> 
         <div className="carousel-inner"> 
             <div className="carousel-item active"> 
-                <img src={p1Img}  className="d-block w-100 h-95" alt="First slide" style={{ height: '95vh', objectFit: 'fill' }}/> 
+                <img src={p1Img}  className="d-block w-100 h-95" alt="First slide" style={{ height: '95vh', objectFit: 'cover' }}/> 
             </div> 
             <div className="carousel-item"> 
-                <img src={p2Img} className="d-block w-100 h-95" alt = "Second slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
+                <img src={p2Img} className="d-block w-100 h-95" alt = "Second slide" style={{ height: '95vh', objectFit: 'cover' }}></img> 
             </div> 
             <div className="carousel-item"> 
-                <img src={p3Img} className="d-block w-100 h-95" alt = "Third slide" style={{ height: '95vh', objectFit: 'fill' }}></img> 
+                <img src={p3Img} className="d-block w-100 h-95" alt = "Third slide" style={{ height: '95vh', objectFit: 'cover' }}></img> 
             </div> 
         </div> 
     </div> 
