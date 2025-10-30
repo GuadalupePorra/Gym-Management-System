@@ -39,7 +39,7 @@ const Main = () => {
             <div className="clases" id="clases"> 
                 <h2>NUESTRAS CLASES</h2> 
                 <div className="slider-container">
-                    <div className="slider-track"> {/* Tarjetas duplicadas para efecto infinito */} {[...Array(2)].map((_, i) => ( <React.Fragment key={i}> 
+                    <div className="slider-track">  {[...Array(2)].map((_, i) => ( <React.Fragment key={i}> 
                         <div className="card-custom"> 
                             <img src={funcionalImg} alt="Funcional" /> 
                             <h5>Funcional</h5> 
